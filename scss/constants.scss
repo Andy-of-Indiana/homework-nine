@@ -1,107 +1,97 @@
-.logo {
-  height: 63px;
-  width: 140px;
-  margin-left: 25px;
-  margin-top: 15px;
-}
-
-.innerBinding {
-  height: auto;
-  width: 64%;
-  margin: 0 auto;
-}
-.outerBinding {
-  height: auto;
-  width: 77%;
-  margin: 0 auto;
-}
-.titleLine {
-  height: 2px;
-  width: 70%;
-  background-color: $black;
-  bottom: 0;
-  position: absolute;
-}
-
-.footer {
-  min-height: 100px;
+.all {
   width: 100%;
-  background-color: $blue;
-}
-.bottom {
-  height: auto;
-  width: 77%;
-  margin: 0 auto;
+  min-height: auto;
   display: flex;
-  align-items: center;
-}
-.sideBottom {
-  height: auto;
-  width: 200px;
+  flex-direction: column;
+  justify-content: space-between;
 
-  .socialMedia {
-    height: 30px;
-    width: 140px;
-    margin-top: 25px;
+  .logo {
+    max-width: 365px;
+    margin-top: 20px;
+    margin-left: 10px;
+
+    p {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      font-size: 40px;
+      color: white;
+    }
+  }
+  .head {
+    width: 100%;
+    min-height: 100px;
+    background: navy;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    nav {
+      width: 450px;
+      margin-top: 35px;
+      margin-right: 20px;
+      display: flex;
+      justify-content: space-evenly;
+
+      a {
+        text-decoration: none;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        font-size: 20px;
+        color: white;
+      }
+    }
+  }
+  .content {
+    width: 100%;
+    min-height: auto;
+  }
+  .bottom {
+    width: 100%;
+    min-height: 100px;
+    background: navy;
     display: flex;
     justify-content: space-between;
 
-    .facebook {
-      height: 30px;
-      width: 30px;
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-image: url(../assets/images/facebook.png);
-    }
-    .instagram {
-      height: 30px;
-      width: 30px;
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-image: url(../assets/images/instagram.png);
-    }
-    .twitter {
-      height: 30px;
-      width: 30px;
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-image: url(../assets/images/twitter.png);
-    }
-  }
-}
-.bottomText {
-  height: auto;
-  width: 60%;
-  text-align: center;
-  margin-top: 40px;
-}
-.bottomText p {
-  font-size: $mainFont21;
-  font-family: $mainType;
-  color: $white;
-}
+    .footerInfo {
+      width: auto;
+      height: 20px;
+      margin-top: 55px;
 
-@media only screen and (max-width: 950px) {
-  .logo {
-    margin: 0 auto;
-    margin-top: 15px;
+      p {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        font-size: 15px;
+        color: white;
+      }
+    }
+    .counterWeight {
+      width: 365px;
+      margin-right: 10px;
+    }
   }
-  .footer {
-    height: 250px;
-  }
+}
+@media only screen and (max-width: 1177px) {
   .bottom {
-    margin: 0 auto;
+    flex-direction: column;
+
+    .footerInfo {
+      margin: 0;
+      margin-bottom: 30px;
+      margin-left: 10px;
+    }
+    .counterWeight {
+      width: 0;
+    }
+  }
+}
+@media only screen and (max-width: 860px) {
+  .head {
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
-  }
-  .socialMedia {
-    margin: 0 auto;
-  }
-  .bottomText {
-    width: 80%;
+
+    nav {
+      margin-bottom: 30px;
+      margin-left: -25px;
+    }
   }
 }
